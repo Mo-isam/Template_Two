@@ -145,11 +145,16 @@ a {
     width: 100%;
     grid-template-columns: repeat(12, 1fr);
     gap: 40px;
-    align-items: center;
-    margin: 0 15px;
+    margin: 0px auto;
+    padding: 0px 15px;
 }
 /* !end container */
 /* !header */
+header .container {
+    align-items: center;
+    margin: 0 15px;
+    padding: 0;
+}
 header {
     display: flex;
     justify-content: center;
@@ -480,13 +485,13 @@ header .container {
 /* ! video */
 .video-box {
     position: relative;
-    margin: 40px 0;
+    margin: 40px 0 0;
     width: 100%;
     height: fit-content;
     overflow: hidden;
 }
 .video-box video {
-    max-width: 100%;
+    width: 100vw;
 }
 .video-box div {
     position: absolute;
@@ -529,13 +534,20 @@ header .container {
     flex-direction: column;
     align-items: center;
 }
-.about > div:nth-child(2) {
+.about > :nth-child(2) {
+    width: 100%;
+}
+.about > div:not(:first-child) {
+    margin-bottom: 60px;
+}
+.about > div:nth-child(2) > div:first-child {
     display: flex;
     justify-content: center;
     margin-bottom: -3px;
 }
 .about > div:nth-child(2) img {
     max-width: 90%;
+    z-index: -1;
 }
 .about .stats .container > div {
     grid-column: span 12;
@@ -564,8 +576,11 @@ header .container {
     background-image: url(../images/ruins_3840x2160.png);
     background-size: cover;
     background-position: center;
-    width: 100%;
+    width: inherit;
     min-height: 50vh;
+}
+.stats .container {
+    align-items: center;
 }
 .stats h4 {
     font-size: 50px;
@@ -589,10 +604,6 @@ header .container {
     font-size: 20px;
 }
 /* ! testimonials our-skills */
-.our-skills .container {
-    margin: 0 auto;
-    padding: 0 15px;
-}
 .p-title {
     max-width: 450px;
     text-align: center;
@@ -723,4 +734,154 @@ header .container {
     margin-bottom: 5px;
 }
 /* ! end testimonials our-skills */
+/*! quote */
+.quote {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/hope_2560x1440.jpg);
+    background-position: bottom;
+    background-size: cover;
+    color: white;
+    margin-bottom: 0 !important;
+}
+.quote::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.quote p {
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.quote p::before {
+    content: open-quote;
+}
+.quote p::after {
+    content: close-quote;
+}
+.quote .container {
+    z-index: 1231;
+}
+.quote .container div {
+    display: grid;
+    text-align: center;
+    grid-column: span 12;
+    align-content: center;
+}
+.quote .container span {
+    /* display: block; */
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/*! end quote */
+
 /* ?----------------------------End about----------------------------*/
+
+/* ?------------------------------pricing----------------------------*/
+
+.pricses-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    grid-column: span 12;
+    /* text-align: center; */
+    color: var(--primary-color);
+}
+.pricses-box > div {
+    width: calc(100% - 20px);
+    margin: 40px 0px;
+}
+/* Small */
+@media (min-width: 768px) {
+    .pricses-box > div {
+        width: calc(50% - 20px);
+        margin: 40px 0px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .pricses-box > div {
+        width: calc(25% - 20px);
+        margin: 40px 0px;
+    }
+}
+
+.pricses-box > div > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-top: solid 1px var(--main-color);
+    line-height: 1.5;
+}
+.pricses-box > div > div:not(:nth-child(2)) {
+    padding: 40px;
+}
+.pricses-box > div > div > p {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 20px 10px;
+    width: 120px;
+    text-align: center;
+}
+.pricses-box > div > div > p:not(:last-child) {
+    border-bottom: solid 1px var(--main-color);
+}
+.pricses-box h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.pricses-box h4 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 59.48px;
+    position: relative;
+}
+.pricing .pricses-box h4::before {
+    content: "$";
+    position: absolute;
+    left: -10px;
+    font-size: 20.53px;
+}
+.pricing .pricses-box h4::after {
+    content: "/mo";
+    font-size: 13px;
+}
+.pricses-box > div > div:nth-child(3) div {
+    text-transform: capitalize;
+    padding: 10px 30px;
+    border: solid 1px var(--main-color);
+}
+.go-contact {
+    display: grid;
+    justify-items: center;
+    grid-column: span 12;
+    text-transform: capitalize;
+}
+.go-contact * {
+    margin: 10px 0px;
+}
+.go-contact h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+.go-contact p {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 20px;
+    color: white;
+    background-color: var(--main-color);
+}
+
+/* ?----------------------------End pricing----------------------------*/
