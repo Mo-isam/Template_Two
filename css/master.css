@@ -589,10 +589,9 @@ header .container {
     font-size: 20px;
 }
 /* ! testimonials our-skills */
-.our-skils .container {
+.our-skills .container {
     margin: 0 auto;
     padding: 0 15px;
-    gap: 40px;
 }
 .p-title {
     max-width: 450px;
@@ -650,10 +649,10 @@ header .container {
     color: #a8a8a8;
     align-self: flex-end;
 }
-.our-skils .Navigation span:not(:nth-child(2)) {
+.our-skills .Navigation span:not(:nth-child(2)) {
     border-color: #a8a8a8;
 }
-.our-skils .Navigation span {
+.our-skills .Navigation span {
     width: 10px;
     height: 10px;
     margin: 2px;
