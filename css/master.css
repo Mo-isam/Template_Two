@@ -561,7 +561,7 @@ header .container {
 .stats {
     display: flex;
     align-items: center;
-    background-image: url(images/ruins_3840x2160.png);
+    background-image: url(../images/ruins_3840x2160.png);
     background-size: cover;
     background-position: center;
     width: 100%;
