@@ -1086,4 +1086,9 @@ footer ul li {
 footer span{
     color: var(--main-color);
 }
+footer p{
+    font-size: 15px;
+    font-weight: 600;
+
+}
 /* ?----------------------------End FOOTER----------------------------*/
