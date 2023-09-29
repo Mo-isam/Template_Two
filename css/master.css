@@ -867,6 +867,7 @@ header .container {
     justify-items: center;
     grid-column: span 12;
     text-transform: capitalize;
+    text-align: center;
 }
 .go-contact * {
     margin: 10px 0px;
@@ -883,5 +884,206 @@ header .container {
     color: white;
     background-color: var(--main-color);
 }
+/* ! subscribe */
+.subscribe {
+    position: relative;
+    background-image: url(../images/subscribe\ 2.jpg);
+    background-position: center;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 100px;
+}
+.subscribe::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.subscribe .container {
+    z-index: 1231;
+}
+.subscribe .container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: span 6;
+    max-width: 100%;
+}
+@media (max-width: 768px) {
+    .subscribe .container > div {
+        grid-column: span 12;
+    }
+}
+.subscribe p {
+    font-size: 13px;
+    font-weight: 400;
+}
+.subscribe form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px white;
+    padding-left: 20px;
+    max-width: inherit;
+    min-width: 250px;
+}
+.subscribe form input {
+    min-width: 10px;
+    padding: 15px 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    caret-color: var(--main-color);
+}
+.subscribe form input::placeholder {
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 400;
+}
+.subscribe form input:focus::placeholder {
+    visibility: hidden;
+}
+.subscribe form button {
+    padding: 15px 10px;
+    color: white;
+    background-color: var(--main-color);
+    text-transform: uppercase;
+    border: none;
+}
+/* ! end subscribe */
 
 /* ?----------------------------End pricing----------------------------*/
+/* ?------------------------------contact----------------------------*/
+.contact .container > form {
+    grid-column: span 8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    caret-color: #00c7fc;
+    /* align-items: stretch; */
+}
+.contact .container > form input,
+.contact textarea {
+    resize: none;
+    outline: none;
+    margin: 10px 0px;
+    padding: 10px;
+    font-size: 13px;
+    border: solid 1px #dbdbdb;
+    /* border: none; */
+}
+.contact .container > form input::placeholder,
+.contact textarea::placeholder {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 400;
+    color: #000000;
+}
+.contact .container > form *:focus::placeholder {
+    visibility: hidden;
+}
+.contact .container > form input[type="button"] {
+    background-color: var(--main-color);
+    color: white;
+    align-self: flex-end;
+    text-transform: uppercase;
+}
+
+.contact .container > div {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.contact .container > div h3 {
+    color: #1f2021;
+    margin: 10px 0;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.contact .container > div p {
+    color: #999999;
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+@media (max-width: 700px) {
+    body .contact .container > * {
+        grid-column: span 12;
+    }
+    .contact .container > div {
+        flex-direction: row;
+    }
+}
+/* ?----------------------------End contact----------------------------*/
+/* ?------------------------------FOOTER----------------------------*/
+footer {
+    position: relative;
+    background-image: url(../images/footer.jpg);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2;
+    margin-top: 50px;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.281);
+}
+footer > div {
+    z-index: 121;
+    text-align: center;
+}
+footer img {
+    width: 200px;
+}
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+footer h3{
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 30px;
+}
+footer h3::after{
+    content: "";
+    height: 2px;
+    width: 100%;
+    bottom: -3px;
+    background-color: white;
+    position: absolute;
+    display: block;
+}
+footer ul li {
+    margin: 10px;
+}
+footer span{
+    color: var(--main-color);
+}
+/* ?----------------------------End FOOTER----------------------------*/
